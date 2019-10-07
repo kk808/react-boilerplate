@@ -1,5 +1,5 @@
 # Overview
-Show the cheapest price per calendar month for each carrier in the next 12 months.
+Static website boilerplate with Webpack 4
 
 # Getting started for developer
 ## Requirement
