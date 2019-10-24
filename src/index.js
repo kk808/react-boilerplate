@@ -4,7 +4,7 @@ import Panel from 'components/panel';
 const App = () => {
 	return (
 		<React.Fragment>
-			<Panel text="test panel"></Panel>
+			<Panel text="sample panel"></Panel>
 		</React.Fragment>
 	);
 };
