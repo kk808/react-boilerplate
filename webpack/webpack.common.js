@@ -4,7 +4,7 @@ const Path = require('path');
 
 module.exports = {
 	entry: {
-		main: [ Path.resolve('src', 'js/main.js') ]
+		main: [ Path.resolve('src', 'app/index.js') ]
 	},
 	mode: 'production',
 	module: {
@@ -13,10 +13,7 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: [ '@babel/preset-env' ]
-					}
+					loader: 'babel-loader'
 				}
 			}
 		]
@@ -26,17 +23,15 @@ module.exports = {
 			'process.env.NODE_ENV': JSON.stringify('production')
 		}),
 		new HtmlWebPackPlugin({
-			template: Path.resolve('src', 'index.html')
+			template: Path.resolve('src', 'app/index.html')
 		})
 	],
 	resolve: {
-		modules: [ 
-			Path.join(__dirname, 'src'), 
-			'node_modules'
-		],
+		modules: [ Path.join(__dirname, 'src'), 'node_modules' ],
 		alias: {
 			src: Path.resolve('src'),
-			style: Path.resolve('src', 'style'),
+			components: Path.resolve('src', 'components'),
+			style: Path.resolve('src', 'style')
 		}
 	}
 };

@@ -18,7 +18,7 @@ module.exports = merge(common, {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebPackPlugin({
-			template: Path.resolve('src', 'index.html'),
+			template: Path.resolve('src', 'app/index.html'),
 			hash: true,
 			minify: {
 				removeComments: true,
